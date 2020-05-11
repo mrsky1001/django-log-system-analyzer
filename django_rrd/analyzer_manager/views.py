@@ -5,11 +5,11 @@ from analyzer_manager.components.MainMenu.MainMenu import main_menu_component
 
 
 def index(request):
-    return render(request, "index.html")
-
-
-def main_menu(request):
     return main_menu_component(render, request)
+
+#
+# def main_menu(request):
+#     return main_menu_component(render, request)
 
 
 def about(request):

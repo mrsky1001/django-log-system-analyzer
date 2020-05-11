@@ -2,17 +2,31 @@ body {
     position: relative;
 }
 
-body>div.container{
+body > div.container {
     padding: 0;
 }
 
-.footer-block {
+#footer-block {
+    border-radius: 5px;
     border: darkgray solid 1px;
     margin-top: 5px;
     padding: 20px;
 }
 
-.content-footer {
-    overflow: auto;
-    max-height: 150px;
+#content-footer {
+    /*overflow: visible;*/
+    /*max-height: 150px;*/
+}
+
+#console-log {
+    border-radius: 5px;
+    border: 0;
+    /*background-color: beige;*/
+    width: 100%;
+    height: content-box;
+}
+
+#main-block {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }

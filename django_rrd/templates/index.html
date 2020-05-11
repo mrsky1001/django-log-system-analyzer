@@ -60,11 +60,9 @@
     <div id="main-block" class="row">
         <div id="left-sidebar" class="col-3">
             <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+                {% for item in list_menu %}
+                <li id="menu-item-{{item.id}}" class="list-group-item">{{item.description}}</li>
+                {% endfor %}
             </ul>
         </div>
         <div id="content" class="col-6">
@@ -75,32 +73,32 @@
         <div id="right-sidebar" class="col-3">
         </div>
     </div>
-    <footer>
-        <div id="footer-block" class="row align-items-end">
-            <div class="col-12">
-                <div class="footer-block" style="background-color: aliceblue">
-                    <div id="header-footer">
-                        <h5>Console log: </h5>
-                    </div>
-                    <div id="content-footer" class="content-footer">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
-                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
-                        minus nobis porro, quibusdam reprehenderit sunt?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
-                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
-                        minus nobis porro, quibusdam reprehenderit sunt?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
-                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
-                        minus nobis porro, quibusdam reprehenderit sunt?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
-                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
-                        minus nobis porro, quibusdam reprehenderit sunt?
-                    </div>
-
+    <div class="row align-items-end">
+        <div class="col-12">
+            <div id="footer-block">
+                <div id="header-footer">
+                    <h5>Console log: </h5>
                 </div>
+                <div id="content-footer">
+                    <textarea name="console-log" id="console-log" cols="30" rows="8">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                    </textarea>
+                </div>
+
             </div>
         </div>
-    </footer>
+    </div>
 </div>
 </body>
 </html>
