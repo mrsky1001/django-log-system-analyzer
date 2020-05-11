@@ -1,4 +1,4 @@
-"""django_rrd URL Configuration
+"""web_manager URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-from rrd_manager import views
+from analyzer_manager import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    re_path('about', views.about),
+    re_path('main-menu', views.main_menu),
     re_path('contact', views.contact),
 ]
