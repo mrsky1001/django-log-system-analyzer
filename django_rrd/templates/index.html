@@ -8,10 +8,11 @@
     {% bootstrap_javascript %}
     {% bootstrap_css %}
     {% load static %}
+    <script src="{% static 'js/app.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 </head>
 <body>
-<div>
+<header>
     <div id="nav-block">
         <div id="navbar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -54,6 +55,8 @@
             </nav>
         </div>
     </div>
+</header>
+<div class="container">
     <div id="main-block" class="row">
         <div id="left-sidebar" class="col-3">
             <ul class="list-group">
@@ -72,14 +75,32 @@
         <div id="right-sidebar" class="col-3">
         </div>
     </div>
-    <div id="footer-block" class="row">
-        <div class="col-12">
-            <div class="footer-block" style="background-color: aliceblue">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dicta dolorem ea eius expedita, fugiat id maiores, minus optio quod rem ut velit. Accusamus amet commodi id natus quaerat vel?
-                <hr style="width: 100%">
+    <footer>
+        <div id="footer-block" class="row align-items-end">
+            <div class="col-12">
+                <div class="footer-block" style="background-color: aliceblue">
+                    <div id="header-footer">
+                        <h5>Console log: </h5>
+                    </div>
+                    <div id="content-footer" class="content-footer">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, exercitationem magnam magni
+                        mollitia odio sunt voluptas. Cumque debitis deserunt dicta dolorem dolorum, iure laboriosam
+                        minus nobis porro, quibusdam reprehenderit sunt?
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 </div>
 </body>
 </html>
