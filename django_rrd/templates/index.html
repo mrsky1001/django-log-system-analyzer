@@ -59,9 +59,16 @@
 <div class="container">
     <div id="main-block" class="row">
         <div id="left-sidebar" class="col-3">
-            <ul class="list-group">
+            <ul class="navbar-nav mr-auto sidenav list-group">
                 {% for item in list_menu %}
-                <li id="menu-item-{{item.id}}" class="list-group-item">{{item.description}}</li>
+                <li id="menu-item-{{item.id}}" class="nav-item list-group-item">
+                    <a class="nav-link nav-link-collapse"
+                       href="#"
+                       data-toggle="collapse"
+                       data-target="#collapseSubItems2"
+                       aria-controls="collapseSubItems2"
+                       aria-expanded="false"
+                    >{{item.name}}</a></li>
                 {% endfor %}
             </ul>
         </div>

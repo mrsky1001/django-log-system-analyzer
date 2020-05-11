@@ -30,3 +30,13 @@ body > div.container {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+
+.nav-link{
+    color: inherit;
+}
+
+.nav-link:hover {
+  transition: all 0.4s;
+}
+

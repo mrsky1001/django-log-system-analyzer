@@ -72,7 +72,7 @@ class MenuFactory:
     def __init__(self, title, settings, init_function=lambda: None):
         self.getTitle = lambda: title
         self.settings = settings
-        self.list_item_menu = []
+        self.list_item_menu = init_function()
         self.init_function = init_function
 
     def display_menu_repeat(self, text=''):
