@@ -57,22 +57,23 @@
     </div>
 </header>
 <div class="container">
+    <div id="header-block" class="row">
+        <div class="col-3">
+        </div>
+        <div id="title-content" class="col-6">
+            <h4>
+                {{ title }}
+            </h4>
+            <hr/>
+        </div>
+    </div>
     <div id="main-block" class="row">
         <div id="left-sidebar" class="col-3">
-            <ul class="navbar-nav mr-auto sidenav list-group">
-                {% for item in list_menu %}
-                <li id="menu-item-{{item.id}}" class="nav-item list-group-item">
-                    <a class="nav-link nav-link-collapse"
-                       href="#"
-                       data-toggle="collapse"
-                       data-target="#collapseSubItems2"
-                       aria-controls="collapseSubItems2"
-                       aria-expanded="false"
-                    >{{item.name}}</a></li>
-                {% endfor %}
-            </ul>
+            {% block left-sidebar %}
+            {% endblock left-sidebar %}
         </div>
         <div id="content" class="col-6">
+
             <div class="container">
                 <a href="/main-menu"> Запуск...</a>
             </div>

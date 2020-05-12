@@ -32,11 +32,19 @@ body > div.container {
 }
 
 
-.nav-link{
+.nav-link {
     color: inherit;
 }
 
-.nav-link:hover {
-  transition: all 0.4s;
+#left-sidebar li:hover {
+    background-color: antiquewhite;
+    transition: all 0.4s;
 }
 
+#left-sidebar li a:hover {
+    color: inherit;
+}
+
+#title-content {
+    text-align: center;
+}

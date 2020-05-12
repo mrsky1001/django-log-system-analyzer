@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'analyzer_manager',
+    'analyzer',
     'bootstrap4'
 ]
 

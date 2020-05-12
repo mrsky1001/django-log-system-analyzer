@@ -7,8 +7,6 @@ from pandas.io import json
 
 from analyzer.src.classes.OpenFile import open_file, FORMATS_OPEN, check_exist_file
 from analyzer.src.classes.PrintText import print_text, THEMES_MESSAGE
-from analyzer.src.modules import RRDFactory
-from analyzer.src.modules.MenuFactory import MenuFactory, init_menu_selected_rrd
 from analyzer.src.modules.Settings import settings
 
 list_functions = ["info", "fetch", "graph", "xport", "dump", "change_params", "exit"]
@@ -48,10 +46,10 @@ class RRD:
             print_text(e, THEMES_MESSAGE.ERROR)
         return list_ds
 
-    def display_menu(self, rrd_factory):
-        menu_rrd = MenuFactory(settings.local.menu_rrd, settings,
-                               lambda: init_menu_selected_rrd(settings, self, rrd_factory))
-        menu_rrd.display_menu_repeat([self.name_host, self.file_name])
+    # def display_menu(self, rrd_factory):
+        # menu_rrd = MenuFactory(settings.local.menu_rrd, settings,
+        #                        lambda: init_menu_selected_rrd(settings, self, rrd_factory))
+        # menu_rrd.display_menu_repeat([self.name_host, self.file_name])
 
     def display_params(self):
         print_text(settings.local.params_rrd, THEMES_MESSAGE.INFO)

@@ -1,15 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from analyzer_manager.components.MainMenu.MainMenu import main_menu_component
+from analyzer_manager.components.MainMenu.MainMenu import get_main_menu
+
+
+# def index(request):
+#     return render(request, "index.html")
 
 
 def index(request):
-    return main_menu_component(render, request)
-
-#
-# def main_menu(request):
-#     return main_menu_component(render, request)
+    return get_main_menu(render, request)
 
 
 def about(request):

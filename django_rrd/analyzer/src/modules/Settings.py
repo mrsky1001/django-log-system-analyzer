@@ -95,13 +95,13 @@ class Settings:
         print_text("height_graph = " + self.height_graph)
         print_text("width_graph = " + self.width_graph)
 
-    def change_localization(self):
-        menu = MenuFactory(self.local.menu_change_locale, self,
-                           lambda: [MenuItem("Russian", lambda: self.load_localization("rus")),
-                                    MenuItem("English", lambda: self.load_localization("eng"))])
-
-        menu.display_menu()
-        print_text(self.lang)
+    # def change_localization(self):
+    #     menu = MenuFactory(self.local.menu_change_locale, self,
+    #                        lambda: [MenuItem("Russian", lambda: self.load_localization("rus")),
+    #                                 MenuItem("English", lambda: self.load_localization("eng"))])
+    #
+    #     menu.display_menu()
+    #     print_text(self.lang)
 
 
 settings = Settings()

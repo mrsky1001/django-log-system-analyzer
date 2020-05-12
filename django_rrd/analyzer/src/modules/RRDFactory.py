@@ -17,7 +17,7 @@ import os
 from tabulate import tabulate
 
 from analyzer.src.modules.RRD import RRD
-from analyzer.src.modules.MenuFactory import MenuItem, set_id
+from analyzer.src.modules.MenuFactory import MenuItem
 
 
 class RRDFactory:
