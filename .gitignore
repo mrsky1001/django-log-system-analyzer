@@ -1,5 +1,7 @@
 .idea/
 
+/django_rrd/staticfiles
+
 /django_rrd/analyzer/src/resources/exports/*
 /django_rrd/analyzer/src/resources/rrd_database/*
 venv/
