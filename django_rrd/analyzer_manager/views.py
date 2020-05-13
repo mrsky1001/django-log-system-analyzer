@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # def index(request):
 #     return render(request, "index.html")
-from analyzer_manager.definitions import render_list_rrd
+from analyzer_manager.definitions import render_list_rrd, render_settings
 
 
 def index(request):
@@ -13,6 +13,8 @@ def index(request):
 def list_rrd(request):
     return render_list_rrd(render, request)
 
+def settings(request):
+    return render_settings(render, request)
 
 def about(request):
     return HttpResponse("<h2>О сайте</h2>")

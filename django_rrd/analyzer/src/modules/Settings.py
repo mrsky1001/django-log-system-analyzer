@@ -72,36 +72,68 @@ class Settings:
 
     def display_settings(self):
         print_text(self.local.main_settings, THEMES_MESSAGE.INFO)
-        print_text("path = " + self.path)
-        print_text("root = " + self.root)
-        print_text("root_resources = " + self.root_resources)
-        print_text("root_classes = " + self.root_classes)
-        print_text("root_modules = " + self.root_modules)
-        print_text("path_to_rrd_database = " + self.path_to_rrd_database)
-        print_text("path_to_exports = " + self.path_to_exports)
-        print_text("path_to_correlation = " + self.path_to_correlation)
-        print_text("path_to_correlation_images = " + self.path_to_correlation_images)
-        print_text("path_to_correlation_xls = " + self.path_to_correlation_xls)
-        print_text("path_to_merges_params = " + self.path_to_merges_params)
-        print_text("path_to_csv = " + self.path_to_csv)
-        print_text("path_to_description_of_params = " + self.path_to_description_of_params)
-        print_text("path_to_params_rrd = " + self.path_to_params_rrd)
-        print_text("path_to_graphs = " + self.path_to_graphs)
-        print_text("path_to_localization = " + self.path_to_localization)
-        print_text("localization = " + self.lang)
-        print_text("start_point = " + self.start_point)
-        print_text("end_point = " + self.end_point)
-        print_text("type_command = " + self.type_command)
-        print_text("height_graph = " + self.height_graph)
-        print_text("width_graph = " + self.width_graph)
+        print_text("path = ", self.path)
+        print_text("root = ", self.root)
+        print_text("root_resources = ", self.root_resources)
+        print_text("root_classes = ", self.root_classes)
+        print_text("root_modules = ", self.root_modules)
+        print_text("path_to_rrd_database = ", self.path_to_rrd_database)
+        print_text("path_to_exports = ", self.path_to_exports)
+        print_text("path_to_correlation = ", self.path_to_correlation)
+        print_text("path_to_correlation_images = ", self.path_to_correlation_images)
+        print_text("path_to_correlation_xls = ", self.path_to_correlation_xls)
+        print_text("path_to_merges_params = ", self.path_to_merges_params)
+        print_text("path_to_csv = ", self.path_to_csv)
+        print_text("path_to_description_of_params = ", self.path_to_description_of_params)
+        print_text("path_to_params_rrd = ", self.path_to_params_rrd)
+        print_text("path_to_graphs = ", self.path_to_graphs)
+        print_text("path_to_localization = ", self.path_to_localization)
+        print_text("localization = ", self.lang)
+        print_text("start_point = ", self.start_point)
+        print_text("end_point = ", self.end_point)
+        print_text("type_command = ", self.type_command)
+        print_text("height_graph = ", self.height_graph)
+        print_text("width_graph = ", self.width_graph)
 
-    # def change_localization(self):
-    #     menu = MenuFactory(self.local.menu_change_locale, self,
-    #                        lambda: [MenuItem("Russian", lambda: self.load_localization("rus")),
-    #                                 MenuItem("English", lambda: self.load_localization("eng"))])
-    #
-    #     menu.display_menu()
-    #     print_text(self.lang)
+    def get_list_settings(self):
+        class Param: 
+            def __init__(self, name, value):
+                self.name = name
+                self.value = value
+        
+        list_settings = []
+
+        list_settings.append(Param("path: ", self.path))
+        list_settings.append(Param("root: ", self.root))
+        list_settings.append(Param("root_resources: ", self.root_resources))
+        list_settings.append(Param("root_classes: ", self.root_classes))
+        list_settings.append(Param("root_modules: ", self.root_modules))
+        list_settings.append(Param("path_to_rrd_database: ", self.path_to_rrd_database))
+        list_settings.append(Param("path_to_exports: ", self.path_to_exports))
+        list_settings.append(Param("path_to_correlation: ", self.path_to_correlation))
+        list_settings.append(Param("path_to_correlation_images: ", self.path_to_correlation_images))
+        list_settings.append(Param("path_to_correlation_xls: ", self.path_to_correlation_xls))
+        list_settings.append(Param("path_to_merges_params: ", self.path_to_merges_params))
+        list_settings.append(Param("path_to_csv: ", self.path_to_csv))
+        list_settings.append(Param("path_to_description_of_params: ", self.path_to_description_of_params))
+        list_settings.append(Param("path_to_params_rrd: ", self.path_to_params_rrd))
+        list_settings.append(Param("path_to_graphs: ", self.path_to_graphs))
+        list_settings.append(Param("path_to_localization: ", self.path_to_localization))
+        list_settings.append(Param("localization: ", self.lang))
+        list_settings.append(Param("start_point: ", self.start_point))
+        list_settings.append(Param("end_point: ", self.end_point))
+        list_settings.append(Param("type_command: ", self.type_command))
+        list_settings.append(Param("height_graph: ", self.height_graph))
+        list_settings.append(Param("width_graph: ", self.width_graph))
+
+        return list_settings
+# def change_localization(self):
+#     menu = MenuFactory(self.local.menu_change_locale, self,
+#                        lambda: [MenuItem("Russian", lambda: self.load_localization("rus")),
+#                                 MenuItem("English", lambda: self.load_localization("eng"))])
+#
+#     menu.display_menu()
+#     print_text(self.lang)
 
 
 settings = Settings()

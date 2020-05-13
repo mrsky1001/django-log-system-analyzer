@@ -47,5 +47,14 @@ body > div.container {
 
 #title-content {
     margin-top: 20px;
-    /*text-align: center;*/
+}
+
+/*text-align: center;*/
+#settings p,#list-rrd p {
+    margin: 0 0 5px;
+    font-size: inherit;
+}
+
+.background-stripped {
+    background-color: #e9ecef;
 }

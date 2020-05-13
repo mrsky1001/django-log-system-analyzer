@@ -51,6 +51,18 @@ def render_list_rrd(render, request):
     }
     return render(request, "list_rrd.html", context=data)
 
+def render_settings(render, request):
+    data = {
+        "title": settings.local.main_settings,
+        "header": {
+            "name": settings.local.name,
+            "description": settings.local.description,
+        },
+        "list_menu": page_factory.list_pages,
+        "list_settings": settings.get_list_settings()
+    }
+    return render(request, "settings.html", context=data)
+
 # def init_menu_selected_rrd(settings, selected_rrd, rrd_factory):
 #     list_item_menu = []
 #

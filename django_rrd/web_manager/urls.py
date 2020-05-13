@@ -21,6 +21,8 @@ from analyzer_manager import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('list-rrd', views.list_rrd),
+    path('settings', views.settings),
     # re_path('main-menu', views.main_menu),
     re_path('contact', views.contact),
 ]

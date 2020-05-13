@@ -3,11 +3,11 @@ from analyzer.src.modules.Settings import settings
 
 
 class Page:
-    def __init__(self, name='', title='', content='', component=''):
+    def __init__(self, name='', title='', url='', template=''):
         self.name = name
         self.title = title
-        self.content = content
-        self.component = component
+        self.url = url
+        self.component = template
 
 
 class PageFactory:
@@ -21,10 +21,11 @@ class PageFactory:
 page_factory = PageFactory([
     Page(name=settings.local.list_rrds_table,
          title=settings.local.list_rrds_table,
-         component='list_rrd.html'),
+         url='/list-rrd',
+         template='list_rrd.html'),
 
     Page(name=settings.local.main_settings,
          title=settings.local.main_settings,
-         content=settings,
-         component='settings.html')
+         url='/settings',
+         template='settings.html')
 ])

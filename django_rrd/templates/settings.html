@@ -1,6 +1,19 @@
-{% extends "index.html" %}
-{% block left-sidebar %}
+{% extends "left_sidebar.html" %}
+{% block content %}
 <div id="settings">
-    "ssasdasd"
+    <div class="row ">
+        <div class="col-4"><p class="font-weight-bold">{{header.name}}</p></div>
+        <div class="col-6"><p class="font-weight-bold">{{header.description}}</p></div>
+    </div>
+    {% for item in list_settings %}
+    <div class="row {% if forloop.counter|divisibleby:'2' %} background-stripped {% endif %}">
+        <div class="col-4">
+            <p class="font-weight-bold">{{item.name}}</p>
+        </div>
+        <div class="col-6">
+            <p>{{item.value}}</p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endblock left-sidebar %}
+{% endblock content %}
