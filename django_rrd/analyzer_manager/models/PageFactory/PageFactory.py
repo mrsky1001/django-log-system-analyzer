@@ -19,22 +19,11 @@ class PageFactory:
 
 
 page_factory = PageFactory([
-    Page(name='list_rrd',
+    Page(name=settings.local.list_rrds_table,
          title=settings.local.list_rrds_table,
-         content={
-             "list_rrd": rrd_factory.list_rrd,
-             "header": {
-                 "name": settings.local.name,
-                 "description": settings.local.description,
-                 "file": settings.local.file
-             }
-         },
          component='list_rrd.html'),
-    Page(name='menu_selected_rrd',
-         title=settings.local.menu_select_rrd_file,
-         content='',
-         component='empty.html'),
-    Page(name='settings',
+
+    Page(name=settings.local.main_settings,
          title=settings.local.main_settings,
          content=settings,
          component='settings.html')

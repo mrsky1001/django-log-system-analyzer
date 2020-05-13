@@ -4,6 +4,7 @@ from analyzer.src.modules.RRDFactory import rrd_factory
 from analyzer.src.modules.Settings import settings
 from analyzer_manager.models.PageFactory.PageFactory import page_factory
 
+
 #
 # def init_menu_rrd_factory(rrd_factory):
 #     list_item_menu = []
@@ -38,7 +39,16 @@ def render_main_menu(render, request):
 
 
 def render_list_rrd(render, request):
-    data = {"title": settings.local.list_rrds_table, "list_menu": page_factory.list_pages}
+    data = {
+        "title": settings.local.list_rrds_table,
+        "header": {
+            "name": settings.local.name,
+            "description": settings.local.description,
+            "file": settings.local.file
+        },
+        "list_menu": page_factory.list_pages,
+        "list_rrd": rrd_factory.list_rrd
+    }
     return render(request, "list_rrd.html", context=data)
 
 # def init_menu_selected_rrd(settings, selected_rrd, rrd_factory):

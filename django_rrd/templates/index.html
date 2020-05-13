@@ -35,18 +35,8 @@
         </div>
     </div>
     <div id="main-block" class="row">
-        <div id="left-sidebar" class="col-3">
-            {% block left-sidebar %}
-            {% endblock left-sidebar %}
-        </div>
-        <div id="content" class="col-6">
-            <div class="container">
-                {% block content %}
-                {% endblock content %}
-            </div>
-        </div>
-        <div id="right-sidebar" class="col-3">
-        </div>
+        {% block main-block %}
+        {% endblock main-block %}
     </div>
     <div class="row align-items-end">
         <div class="col-12">

@@ -166,9 +166,10 @@ class RRDFactory:
         print_text(settings.local.table_params_out_file + settings.path_to_description_of_params + filename)
 
         print_text(settings.local.show_table_params, THEMES_MESSAGE.INFO)
-        if input(settings.local.input).lower() == settings.local.yes.lower():
-            print_text(settings.local.list_rrds_table, THEMES_MESSAGE.INFO)
-            print_text(table)
+        # if input(settings.local.input).lower() == settings.local.yes.lower():
+        print_text(settings.local.list_rrds_table, THEMES_MESSAGE.INFO)
+        print_text(table)
+        return table
 
     def export_params_all_rdd_files_to_csv(self):
 
