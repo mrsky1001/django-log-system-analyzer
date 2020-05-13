@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'analyzer_manager',
     'analyzer',
-    'bootstrap4'
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

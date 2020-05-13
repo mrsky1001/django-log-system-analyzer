@@ -1,0 +1,21 @@
+{% extends "left_sidebar.html" %}
+{% block  content%}
+<div id="list-rrd">
+    <table>
+        <thead>
+        <tr>
+            <th>{{header.name}}</th>
+            <th>{{header.description}}</th>
+            <th>{{header.file}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in list_rrd %}
+        <tr>
+            <td></td>
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
