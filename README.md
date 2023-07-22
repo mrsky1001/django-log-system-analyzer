@@ -1,1 +1,3 @@
-# django-log-system-analyzer
+# About django-log-system-analyzer
+
+Scripts for analize rrd-logs
